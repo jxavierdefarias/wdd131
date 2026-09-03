@@ -1,0 +1,53 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: acme, Arial, sans-serif;
+}
+
+h1 {
+	text-align: center;
+	background-color: #2873ff;
+	padding: 0.5rem;
+}
+
+p {
+	text-align: center;
+}
+
+nav {
+	margin: 0 auto 2rem;
+	max-width: 90vw;
+}
+
+main {
+	margin: 1rem;
+	border: 1px solid rgb(0 0 0 / .2);
+	padding: 1rem;
+	background-color: #eee;
+}
+
+.navigation {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #333;
+	align-items: center;
+}
+.navigation li {
+	flex: 1 1 auto; /* Qual é a diferença entre automático e 100% flexível? */
+}
+.navigation a {
+	display: block;
+	color: #eee;
+	padding: 0.75rem;
+	text-decoration: none;
+	text-align: center;
+}
+.navigation a:hover {
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-color: rgb(0, 60, 255);
+}
