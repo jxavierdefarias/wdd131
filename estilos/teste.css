@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    background-color: #1a4a6b;
+    color: white;
+}
+
+header h1 {
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+/* NAV */
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #555;
+    text-decoration: underline;
+}
+
+/* MAIN */
+main {
+    max-width: 950px;
+    margin: 1rem auto;
+}
+
+main > h1 {
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+.card {
+    border: 1px solid #999;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: #1a4a6b;
+    color: white;
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 1.1rem;
+}
+
+/* CONTEÚDO DO PRIMEIRO CARD */
+.card p {
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.card img {
+    float: right;
+    margin: 1rem;
+    border-radius: 5px;
+    max-width: 150px;
+}
+
+.card h3 {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    margin: 0 3rem;
+    padding-bottom: 0.3rem;
+}
+
+/* Bandeira - para ficar à esquerda */
+.card figure {
+    float: left;
+    margin: 1rem;
+    text-align: center;
+}
+
+.card figure img {
+    float: none;
+    width: 150px;
+    border: 1px solid #ccc;
+}
+
+.card figcaption {
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+/* SEGUNDO CARD - LISTA */
+.card ul {
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a4a6b;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+footer p:last-child {
+    color: yellow;
+    font-size: 0.8rem;
+}

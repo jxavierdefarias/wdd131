@@ -1,32 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 – Fundamentos da Web Dinâmica - Jorge Farias</title>
-    <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica">
-    <meta name="author"contente="wdd 131: Fundamentos da web Dinâmica-Jorge Farias">
-    <link rel="stylesheet" href="estilos/base.css">
+<title>WDD 131: Fundamentos da Web Dinâmica - Jorge Farias</title>
+     <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica, Jorge Farias, Sobre Mim, recursos web dev">
+     <meta name="author" content="Jorge Farias">
+       <link rel="stylesheet" href="estilos/base.css">
+        <script src="scripts/base.js" defer></script>
 </head>
+      <body>
+         <header>
+<h1>WDD 131: Fundamentos da Web Dinâmica - Jorge Farias</h1>
+          <nav>
+    <a href="https://linkedin.com">LinkedIn</a>
+    <a href="https://byupw.instructure.com/">Canvas</a>
+     <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=por">Escritura</a>
+      <a href="#">Projeto Final</a>
+      </nav>
+        </header>
 
-<body>
-   <h1>WDD 131 – Fundamentos da Web Dinâmica - Jorge Farias</h1>
+     <main>
+      <h1>Jorge Farias</h1>
 
-<nav>
-	<ul class="navigation">
-		<li><a href="#">Linkedin</a></li>
-		<li><a href="#">Canvas</a></li>
-		<li><a href="#">Escritura</a></li>
-		<li><a href="#">Projeto Final</a></li>
-	</ul>
-</nav>
+   <section class="card">
+      <h2>Sobre Mim</h2>
+     <div class="content">
+       <img src="imagens/profile.jpeg" alt="Jorge" class="right">
+      <p>Meu nome é Jorge . Nasci no Brasil e vivo em São Paulo.Trabalho na área de T.I. há muitos anos em hardware e com sistemas. Atualmente sou autônomo e presto serviços de  suporte de sistemas na área de automação para Postos de combustíveis e na área comercial para a industria.Meus hobbies são ler livros,ouvir música e brincar com meu cachorro Thor. Gosto de viajar e aprender coisas novas.</p>
 
-<main>
-	<p>Reduza a tela manualmente arrastando a borda da janela de visualização</p>
+      <h3>São Paulo, Brasil</h3>
+     <div class="place">
+<figure>
+<img src="imagens/bandeira-Brasil.webp" alt="Bandeira de Brasil">
+<figcaption>Bandeira Oficial do Brasil</figcaption>
+</figure>
+<p>Brasil é o maior país da América do Sul e o quinto maior do mundo. É conhecido por sua diversidade cultural, natural e gastronômica.</p>
+</div>
+</div>
+</section>
+
+     <section class="card">
+<h2>Recursos Web Dev</h2>
+<ul>
+<li><a href="https://dev.to">Comunidade Dev.to</a></li>
+<li><a href="https://www.smashingmagazine.com/">Revista Smashing</a></li>
+<li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+<li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+<li><a href="https://www.udemy.com/">Udemy</a></li>
+<li><a href="https://picsum.photos/">Imagem de Espaço Reservado Lorem Picsum</a></li>
+   </ul>
+     </section>
 </main>
+
 <footer>
-	<p>&copy; 2026 WDD 131 – Fundamentos da Web Dinâmica - Jorge Farias. Todos os direitos reservados.</p>
-    <p> Última Modificação: <span id="anoatual"></span></p>
-</footer>
-</body>
+        <p>©<span id="currentyear"></span> | Jorge Farias | Brasil</p>
+      <p id="lastModified"></p>
+        </footer>
+   </body>
 </html>
