@@ -1,4 +1,12 @@
-document.getElementById("currentyear").textContent = new Date().getFullYear();
+document.ge// pega o ano atual - usando seu id anoatual
+const ano = document.getElementById("anoatual");
+if (ano) {
+    ano.textContent = new Date().getFullYear();
+}
 
-const mod = new Date(document.lastModified);
-document.getElementById("lastModified").textContent = `Última modificação: ${mod.toLocaleString("pt-BR")}`;
+// pega ultima modificação em português
+const lastMod = document.getElementById("lastModified");
+if (lastMod) {
+    const data = new Date(document.lastModified);
+    lastMod.textContent = `Última modificação: ${data.toLocaleString("pt-BR")}`;
+}
