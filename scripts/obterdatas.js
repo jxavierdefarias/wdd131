@@ -4,6 +4,7 @@ if (ano) {
     ano.textContent = new Date().getFullYear();
 }
 
+
 // pega ultima modificação em português
 const lastMod = document.getElementById("lastModified");
 if (lastMod) {
