@@ -12,4 +12,5 @@ const formatada = dataMod.toLocaleString("pt-BR", {
     second: "2-digit"
 });
 
+
 document.getElementById("lastModified").textContent = `Última modificação: ${formatada}`;
