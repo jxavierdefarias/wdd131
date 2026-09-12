@@ -1,125 +1,67 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+
+:root {
+    --primary-color: #3c0a64;
+    --secondary-color: #eee;
 }
 
-body {
-    font-family: Roboto, Arial, sans-serif;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Roboto', sans-serif; }
 
 header {
-    background-color: #3a0070;
-    color: white;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    position: relative;
 }
-
-header h2 {
-    font-size: 1.5rem;
-}
-
 
 #menu {
     font-size: 1.5rem;
-    border: 0;
+    border: none;
     background: none;
-    color: white;
+    color: #fff;
     cursor: pointer;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
 }
+#menu::before { content: "☰"; }
+#menu.open::before { content: "❌"; }
 
-#menu::before {
-    content: "☰";
-}
-
-#menu.open::before {
-    content: "✖";
-}
-
-
-nav {
+.navigation {
     display: none;
+    list-style: none;
+    background-color: var(--primary-color);
+    flex-direction: column;
     position: absolute;
-    top: 100%;
+    top: 60px;
     left: 0;
     width: 100%;
-    background-color: #3a0070;
 }
 
-nav.open {
+.navigation.open { display: flex; }
+
+.navigation a {
     display: block;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-}
-
-nav a {
-    display: block;
-    color: white;
-    text-align: center;
     padding: 1rem;
+    color: #fff;
     text-decoration: none;
-}
-
-nav a:hover {
-    background-color: #5a2a9e;
-    text-decoration: underline;
-}
-
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-main h1 {
     text-align: center;
-    margin: 1rem 0;
-    color: #3a0070;
 }
+.navigation a:hover { background-color: #5d2d8a; text-decoration: underline; }
 
-.container {
+main { max-width: 800px; margin: 0 auto; }
+main h2 { text-align: center; margin: 1rem; }
+
+.album {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 15px;
+    padding: 15px;
 }
 
-figure {
-    background-color: #eee;
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    text-align: center;
-}
+figure { background-color: var(--secondary-color); padding: 10px; }
+figure img { width: 100%; height: auto; display: block; }
+figcaption { text-align: center; padding: 5px; font-size: 0.9rem; }
 
-figure img {
-    width: 100%;
-    height: auto;
-}
-
-figcaption {
-    padding: 0.5rem;
-    font-size: 0.9rem;
-}
-
-footer {
-    background-color: #3a0070;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 1rem;
-}
-
-footer p {
-    margin: 0.3rem;
-}
-
-/*  flex-direction: column;*/
+footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 1rem; }
