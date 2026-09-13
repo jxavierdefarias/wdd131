@@ -1,11 +1,15 @@
 
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = `Última modificação: ${document.lastModified}`;
+const year = document.querySelector("#currentyear");
+const lastMod = document.querySelector("#lastModified");
+
+year.textContent = new Date().getFullYear();
+lastMod.textContent = `Last Modification: ${document.lastModified}`;
 
 
-const menuButton = document.getElementById("menu");
-const nav = document.querySelector("nav");
-menuButton.addEventListener("click", () => {
-    nav.classList.toggle("open");
-    menuButton.classList.toggle("open");
+const hamButton = document.querySelector("#menu");
+const navigation = document.querySelector(".navigation");
+
+hamButton.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+    hamButton.classList.toggle("open");
 });
