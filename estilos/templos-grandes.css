@@ -1,14 +1,20 @@
 
 @media screen and (min-width: 640px) {
+    header { display: flex; align-items: center; justify-content: space-between; }
     
-    #menu {
-        display: none; 
+    #menu { display: none; }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 0;
+        width: auto;
     }
 
-    header {
-        display: flex;
-        justify-content: space-between;
-    }
+    .album { grid-template-columns: 1fr 1fr 1fr; }
+}
+
 
     nav {
         display: flex;
