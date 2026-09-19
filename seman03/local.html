@@ -1,0 +1,62 @@
+<<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasil</title>
+    <meta name="author" content="Jorge Farias">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/brasil.css">
+    <script src="scripts/brasil.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Brasil</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <img src="imagens/onça-pintada.webp" alt="onça-pintada">
+            </picture>
+
+            <section class="card data-card">
+                <div class="card-header">
+                    <h2>Dados</h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Área:</strong> 587.041 km²</p>
+                    <p><strong>População:</strong> 27.691.018</p>
+                    <p><strong>Capital:</strong> Brasília</p>
+                    <p><strong>Idiomas:</strong> Português</p>
+                    <p><strong>Moeda:</strong> Real Brasileiro (BRL)</p>
+                    <p><strong>Fuso Horário:</strong> UTC-3</p>
+                    <p><strong>DDI:</strong> +55</p>
+                    <p><strong>Domínio:</strong> .br</p>
+                </div>
+            </section>
+
+            <section class="card weather-card">
+                <div class="card-header">
+                    <h2>Clima <span class="icon">⛅</span></h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Temperatura:</strong> 24°C</p>
+                    <p><strong>Condições:</strong> Parcialmente Nublado</p>
+                    <p><strong>Vento:</strong> 5 km/h</p>
+                    <p><strong>Sensação Térmica:</strong> <span id="windchill">9,8 °C</span></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>©<span id="year"></span> | Jorge Farias | Brasil</p>
+        <p>Última Modificação: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
