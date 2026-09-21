@@ -1,3 +1,4 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
   --primary-blue: #0a07dd;
   --primary-green: #0a6b3d;
@@ -5,7 +6,6 @@
   --card-bg: rgba(255,255,255,0.88);
   --text-dark: #333;
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { 
     font-family: 'Roboto', sans-serif;
