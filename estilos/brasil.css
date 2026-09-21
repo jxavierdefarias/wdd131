@@ -1,19 +1,31 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --primary-blue: #0a07dd;
+  --primary-green: #0a6b3d;
+  --card-green: #0f7a4a;
+  --card-bg: rgba(255,255,255,0.88);
+  --text-dark: #333;
+}
+
+{ margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Roboto', sans-serif; background: #fff; }
 
 header {
-    background: #0a07dd;
+    background: var(--primary-blue);
     color: white;
     text-align: center;
     padding: 1.5rem;
-    border-bottom: 12px solid #0a6b3d;
+    border-bottom: 12px solid var(--primary-green);
 }
 header h1 { font-size: 2.8rem; }
+
+header h1::after {
+    content: " 🇧🇷";
+}
 
 .hero {
     position: relative;
     width: 100%;
-    height: 85vh; 
+    height: 85vh;
     overflow: hidden;
 }
 .hero img {
@@ -22,22 +34,22 @@ header h1 { font-size: 2.8rem; }
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  object-position: center 30%; 
+  object-fit: cover;
+  object-position: center 30%;
   z-index: 0;
+  display: block;
 }
-.card {
-    z-index: 1; 
-}
+
 .card {
     position: absolute;
-    background: rgba(255,255,255,0.88);
+    background: var(--card-bg);
     width: 300px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     backdrop-filter: blur(2px);
+    z-index: 1;
 }
 .card-header {
-    background: #0f7a4a;
+    background: var(--card-green);
     color: white;
     padding: 0.8rem 1.2rem;
     margin-left: -15px;
@@ -55,7 +67,7 @@ header h1 { font-size: 2.8rem; }
     text-align: right;
     line-height: 1.9;
     font-size: 0.95rem;
-    color: #333;
+    color: var(--text-dark);
 }
 .card-body strong { margin-right: 8px; color: #222; }
 
@@ -63,7 +75,7 @@ header h1 { font-size: 2.8rem; }
 .weather-card { bottom: 40px; right: 25px; }
 
 footer {
-    background: #0c09db;
+    background: var(--primary-blue);
     color: white;
     text-align: center;
     padding: 1.8rem;
@@ -71,10 +83,9 @@ footer {
     font-size: 1rem;
 }
 
-
 @media (max-width: 640px) {
-    .hero { min-height: auto; display: flex; flex-direction: column; }
-    .hero img { height: 300px; order: -1; }
+    .hero { height: auto; display: flex; flex-direction: column; }
+    .hero img { position: relative; height: 300px; order: -1; z-index: 0; }
     .card { position: relative; width: 90%; top: auto; left: auto; right: auto; bottom: auto; margin: 15px auto; }
     .card-header { margin-left: 0; width: 100%; margin-top: 0; }
     header h1 { font-size: 2rem; }
