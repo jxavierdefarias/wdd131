@@ -13,16 +13,22 @@ header h1 { font-size: 2.8rem; }
 .hero {
     position: relative;
     width: 100%;
-    min-height: 85vh;
+    height: 85vh; 
     overflow: hidden;
 }
 .hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center 30%; 
+  z-index: 0;
 }
-
+.card {
+    z-index: 1; 
+}
 .card {
     position: absolute;
     background: rgba(255,255,255,0.88);
