@@ -16,4 +16,9 @@ function calculateWindChill(tempC, windKmh) {
 
 const temp = 24;
 const wind = 5;
-document.getElementById("windchill").textContent = calculateWindChill(temp, wind);
+document.getElementById("windchill").textContent = calculateWindChill(temp, wind);// Ano atual
+document.querySelector("#year").textContent = new Date().getFullYear();
+
+// Última modificação
+document.querySelector("#lastModified").textContent = document.lastModified;
+
