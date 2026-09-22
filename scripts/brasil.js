@@ -26,4 +26,6 @@ async function getWeather() {
   };
   document.querySelector("#condicoes").textContent = codes[current.weather_code] || "Parcial. Nublado";
 }
+
 getWeather();
+   
