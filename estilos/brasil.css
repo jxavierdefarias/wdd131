@@ -1,4 +1,5 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 :root {
   --primary-blue: #0a07dd;
   --primary-green: #0a6b3d;
@@ -8,89 +9,105 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-     background: #fff;
-     }
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
 
 header {
-    background: var(--primary-blue);
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    border-bottom: 12px solid var(--primary-green);
+  background: var(--primary-blue);
+  color: white;
+  text-align: center;
+  border-bottom: 12px solid var(--primary-green);
+  height: 75px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-header h1 { font-size: 2.8rem; }
 
-header h1::after {
-    content: " ";
+header h1 {
+  font-size: 1.8rem;
+  padding: 0;
+}
+
+main {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 130px); 
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
+
 .hero img {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
   z-index: 0;
-  display: block;
 }
-
 
 .card {
-    position: absolute;
-    background: var(--card-bg);
-    width: 300px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    backdrop-filter: blur(2px);
-    z-index: 1;
+  position: absolute;
+  background: var(--card-bg);
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  backdrop-filter: blur(2px);
+  z-index: 1;
 }
 .card-header {
-    background: var(--card-green);
-    color: white;
-    padding: 0.8rem 1.2rem;
-    margin-left: -15px;
-    margin-top: 15px;
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: var(--card-green);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  margin-left: -15px;
+  margin-top: 15px;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.card-header h2 { font-size: 1.5rem; font-weight: 700; }
-.card-header .icon { font-size: 1.6rem; }
-
+.card-header h2 { font-size: 1.4rem; }
 .card-body {
-    padding: 1.2rem;
-    text-align: right;
-    line-height: 1.9;
-    font-size: 0.95rem;
-    color: var(--text-dark);
+  padding: 1rem;
+  text-align: right;
+  line-height: 1.9;
+  font-size: 0.9rem;
+  color: var(--text-dark);
 }
-.card-body strong { margin-right: 8px; color: #222; }
+.card-body strong { margin-right: 8px; }
 
-.data-card { top: 40px; left: 25px; }
-.weather-card { bottom: 40px; right: 25px; }
+.data-card { top: 25px; left: 25px; }
+.weather-card { bottom: 25px; right: 25px; }
 
 footer {
-    background: var(--primary-blue);
-    color: white;
-    text-align: center;
-    padding: 1.8rem;
-    line-height: 1.6;
-    font-size: 1rem;
+  background: var(--primary-blue);
+  color: white;
+  text-align: center;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
+
 @media (max-width: 640px) {
-    .hero { height: auto; display: flex; flex-direction: column; }
-    .hero img { position: relative; height: 300px; order: -1; z-index: 0; }
-    .card { position: relative; width: 90%; top: auto; left: auto; right: auto; bottom: auto; margin: 15px auto; }
-    .card-header { margin-left: 0; width: 100%; margin-top: 0; }
-    header h1 { font-size: 2rem; }
+  body { height: auto; overflow: auto; }
+  main { overflow: visible; }
+  .hero { height: auto; display: flex; flex-direction: column; }
+  .hero img { position: relative; height: 320px; }
+  .card { position: relative; width: 90%; top: auto; left: auto; right: auto; bottom: auto; margin: 15px auto; }
+  .card-header { margin-left: 0; width: 100%; margin-top: 0; }
 }
