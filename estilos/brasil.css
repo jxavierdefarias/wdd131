@@ -111,3 +111,8 @@ footer {
   .card { position: relative; width: 90%; top: auto; left: auto; right: auto; bottom: auto; margin: 15px auto; }
   .card-header { margin-left: 0; width: 100%; margin-top: 0; }
 }
+
+.weather h2::after {
+  content: " ⛅";
+  margin-left: 8px;
+}
