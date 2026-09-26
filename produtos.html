@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - MODELIT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/modelit.css">
+</head>
+<body>
+    <header>
+        <h1>MODELIT</h1>
+        <button id="menuBtn">☰</button>
+        <nav id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Produtos</a>
+            <a href="contact.html">Orçamento</a>
+        </nav>
+    </header>
+
+    <main style="padding:1rem">
+        <h2 style="font-family: var(--font-titulo); margin-bottom:1rem;">Nosso Catálogo</h2>
+        
+        <div class="filters">
+            <button data-filter="todos" class="btn active">Todos</button>
+            <button data-filter="acrilico" class="btn">Acrílico</button>
+            <button data-filter="veludo" class="btn">Veludo</button>
+            <button data-filter="madeira" class="btn">Madeira</button>
+        </div>
+
+        <div id="product-grid" class="features" style="margin-top:1.5rem;">
+            <!-- Produtos entram via JS -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> MODELIT</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/modelit.js"></script>
+</body>
+</html>

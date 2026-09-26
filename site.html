@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODELIT - Fábrica de Cabides Premium</title>
+    <meta name="description" content="Fábrica MODELIT - Cabides de acrílico, veludo e madeira para lojas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/modelit.css">
+</head>
+<body>
+    <header>
+        <h1>MODELIT</h1>
+        <button id="menuBtn">☰</button>
+        <nav id="mainNav">
+            <a href="site.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200" media="(min-width: 800px)">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Cabides premium MODELIT">
+            </picture>
+            <div class="hero-text">
+                <h2>Organização que Vende</h2>
+                <p>Cabides premium que valorizam sua marca. Direto da fábrica.</p>
+                <a href="produtos.html" class="btn">Ver Catálogo</a>
+            </div>
+        </section>
+
+        <section class="weather">
+            <h2>Clima na Fábrica - SP</h2>
+            <p>Temperatura: <span id="temp">--</span>°C</p>
+            <p>Vento: <span id="wind">--</span> km/h</p>
+            <p>Sensação: <span id="windchill">--</span></p>
+            <p>Condições: <span id="condicoes">--</span></p>
+        </section>
+
+        <section class="features">
+            <div class="card">
+                <h3>Atacado</h3>
+                <p>A partir de 100 unidades com preço de fábrica.</p>
+            </div>
+            <div class="card">
+                <h3>Personalização</h3>
+                <p>Seu logo gravado a laser no cabide.</p>
+            </div>
+            <div class="card">
+                <h3>Premium</h3>
+                <p>Acrílico, Veludo e Madeira certificada.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> MODELIT Fábrica de Cabides</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/modelit.js"></script>
+</body>
+</html>

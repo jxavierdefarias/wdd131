@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento - MODELIT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/modelit.css">
+    <style>
+        form { max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 1rem; }
+        input, select, textarea { padding: 0.8rem; border: 1px solid #ccc; }
+        #mensagemSucesso { display: none; background: #d4edda; color: #155724; padding: 1rem; text-align: center; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MODELIT</h1>
+        <button id="menuBtn">☰</button>
+        <nav id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Produtos</a>
+            <a href="contact.html">Orçamento</a>
+        </nav>
+    </header>
+
+    <main style="padding:1rem">
+        <h2 style="font-family: var(--font-titulo);">Solicite seu Orçamento</h2>
+        <p style="margin-bottom:1rem;">Resposta em até 2h no WhatsApp.</p>
+        
+        <form id="formOrcamento">
+            <input type="text" id="nome" placeholder="Seu nome / Loja" required>
+            <input type="tel" id="whats" placeholder="WhatsApp (11) 99999-9999" required>
+            <select id="tipo" required>
+                <option value="">Qual cabide?</option>
+                <option value="acrilico">Acrílico</option>
+                <option value="veludo">Veludo</option>
+                <option value="madeira">Madeira</option>
+            </select>
+            <input type="number" id="qtd" placeholder="Quantidade (mín. 100)" min="100" required>
+            <textarea id="obs" placeholder="Quer logo personalizado?"></textarea>
+            <button type="submit" class="btn">Enviar Pedido</button>
+        </form>
+        <div id="mensagemSucesso"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> MODELIT</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/modelit.js"></script>
+</body>
+</html>

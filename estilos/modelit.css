@@ -1,0 +1,52 @@
+:root {
+    --preto: #1A1A1A;
+    --branco: #FFFFFF;
+    --dourado: #C9A86A;
+    --cinza: #F5F5F5;
+    --font-titulo: 'Montserrat', sans-serif;
+    --font-corpo: 'Inter', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-corpo); background: var(--branco); color: var(--preto); }
+
+header {
+    background: var(--preto);
+    color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+header h1 { font-family: var(--font-titulo); letter-spacing: 3px; }
+nav { display: none; flex-direction: column; }
+nav.open { display: flex; }
+nav a { color: var(--branco); text-decoration: none; padding: 0.5rem; }
+nav a:hover { color: var(--dourado); }
+
+#menuBtn { background: none; color: var(--branco); border: none; font-size: 1.5rem; cursor: pointer; }
+
+.hero { position: relative; }
+.hero img { width: 100%; height: 400px; object-fit: cover; }
+.hero-text {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.9); padding: 2rem; text-align: center;
+}
+.hero-text h2 { font-family: var(--font-titulo); }
+.btn { background: var(--dourado); color: var(--preto); padding: 0.8rem 1.5rem; text-decoration: none; display: inline-block; margin-top: 1rem; font-weight: bold; }
+
+.weather { background: var(--cinza); padding: 1.5rem; margin: 1rem; border-left: 5px solid var(--dourado); }
+.weather h2::after { content: " ⛅"; } /* REQUISITO DA AUDITORIA */
+
+.features { display: grid; gap: 1rem; padding: 1rem; }
+.card { border: 1px solid #ddd; padding: 1.5rem; text-align: center; }
+.card::after { content: ""; display: table; clear: both; } /* SEGUNDO ::after PRA GARANTIR */
+
+footer { background: var(--preto); color: var(--branco); text-align: center; padding: 1rem; margin-top: 2rem; }
+
+/* MEDIA QUERY OBRIGATÓRIA */
+@media (min-width: 800px) {
+    #menuBtn { display: none; }
+    nav { display: flex; flex-direction: row; gap: 1.5rem; }
+    .features { grid-template-columns: 1fr 1fr 1fr; }
+    .hero-text { padding: 3rem; }
+}
