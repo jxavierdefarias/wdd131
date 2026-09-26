@@ -58,12 +58,12 @@ const templos = [
     area: 116642,
     urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-  {
+    {
     nomeDoTemplo: "Bismarck Dakota do Norte",
     localizacao: "Bismarck, Dakota do Norte, Estados Unidos",
     consagracao: "1999, 19 de setembro",
     area: 8500,
-    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bismarck-north-dakota/400x250/bismarck-north-dakota-temple-lds-138130-wallpaper.jpg"
+    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
   },
   {
     nomeDoTemplo: "Salt Lake City Utah",
