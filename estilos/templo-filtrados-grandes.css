@@ -1,23 +1,19 @@
-@media screen and (min-width: 640px) {
-    #menu { display: none; }
-    
-     header{ display: flex; justify-content: space-between; align-items: center; }
-
-     nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    
-    .navigation {
-        display: flex;
-        flex-direction: row;
-        position: static;
-        width: auto;
-        gap: 2rem;
-        background: none;
-    }
-    .navigation a { padding: 0; }
-
-    .grid { grid-template-columns: 1fr 1fr 1fr; }
+@media screen and (min-width: 740px) {
+  #menu {
+    display: none;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .navigation.open {
+    display: flex;
+  }
+  .album {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  h1 {
+    font-size: 2rem;
+  }
 }

@@ -7,7 +7,6 @@ btn.addEventListener("click", () => {
     nav.classList.toggle("open");
     btn.classList.toggle("open");
 });
-
 const templos = [
   {
     nomeDoTemplo: "Aba Nigeria",
@@ -28,7 +27,7 @@ const templos = [
     localizacao: "Payson, Utah, Estados Unidos",
     consagracao: "2015, 7 de junho",
     area: 96630,
-    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x250/payson-utah-temple-exterior-1416671-wallpaper.jpg"
   },
   {
     nomeDoTemplo: "Yigo Guam",
@@ -52,83 +51,84 @@ const templos = [
     urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
   },
   {
-    nomeDoTemplo: "Cidade do México, México",
+    nomeDoTemplo: "Cidade do México México",
     localizacao: "Cidade do México, México",
     consagracao: "1983, 2 de dezembro",
     area: 116642,
     urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-    {
+  {
+    nomeDoTemplo: "St. George Utah",
+    localizacao: "St. George, Utah, Estados Unidos",
+    consagracao: "1877, 6 de abril",
+    area: 11000,
+    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/st-george-utah/400x250/st-george-temple-lds-149536-wallpaper.jpg"
+  },
+  {
+    nomeDoTemplo: "Colonia Juarez México",
+    localizacao: "Colonia Juarez, México",
+    consagracao: "1999, 6 de março",
+    area: 6800,
+    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/colonia-juarez-mexico/400x250/colonia-juarez-mexico-temple-lds-941524-wallpaper.jpg"
+  },
+  {
     nomeDoTemplo: "Bismarck Dakota do Norte",
     localizacao: "Bismarck, Dakota do Norte, Estados Unidos",
     consagracao: "1999, 19 de setembro",
     area: 8500,
-    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
-  },
-  {
-    nomeDoTemplo: "Salt Lake City Utah",
-    localizacao: "Salt Lake City, Utah, Estados Unidos",
-    consagracao: "1893, 6 de abril",
-    area: 156558,
-    urlDaImagem: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-15669-main.jpg"
-  },
-  {
-    nomeDoTemplo: "Nauvoo Illinois",
-    localizacao: "Nauvoo, Illinois, Estados Unidos",
-    consagracao: "1846, 29 de julho",
-    area: 12000,
-    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/nauvoo-illinois/400x250/nauvoo-temple-756499-wallpaper.jpg"
+    urlDaImagem: "https://churchofjesuschristtemples.org/assets/img/temples/bismarck-north-dakota-temple/bismarck-north-dakota-temple-4070-main.jpg"
   }
 ];
 
-const container = document.querySelector(".grid");
-const titulo = document.querySelector("#titulo-pagina");
+const container = document.querySelector(".album") || document.querySelector("#album") || document.querySelector("main");
 
-function exibir(lista) {
-  container.innerHTML = "";
+function mostrarTemplos(lista) {
+  const albumDiv = document.querySelector(".album");
+  if (albumDiv) albumDiv.innerHTML = "";
+  else {
+    const titulos = container.querySelectorAll("section");
+    titulos.forEach(s => s.remove());
+  }
+
   lista.forEach(templo => {
-    const card = document.createElement("section");
-    const h3 = document.createElement("h3");
-    const pLocal = document.createElement("p");
-    const pCons = document.createElement("p");
-    const pArea = document.createElement("p");
-    const img = document.createElement("img");
-    h3.textContent = templo.nomeDoTemplo;
-    pLocal.innerHTML = `<span class="label">Localização:</span> ${templo.localizacao}`;
-    pCons.innerHTML = `<span class="label">Dedicado:</span> ${templo.consagracao}`;
-    pArea.innerHTML = `<span class="label">Tamanho:</span> ${templo.area} sq ft`;
+    let card = document.createElement("section");
+    let nome = document.createElement("h3");
+    let local = document.createElement("p");
+    let data = document.createElement("p");
+    let tamanho = document.createElement("p");
+    let img = document.createElement("img");
+
+    nome.textContent = templo.nomeDoTemplo;
+    local.textContent = `Localização: ${templo.localizacao}`;
+    data.textContent = `Dedicado: ${templo.consagracao}`;
+    tamanho.textContent = `Tamanho: ${templo.area} sq ft`;
     img.setAttribute("src", templo.urlDaImagem);
     img.setAttribute("alt", templo.nomeDoTemplo);
     img.setAttribute("loading", "lazy");
-    card.append(h3, pLocal, pCons, pArea, img);
-    container.appendChild(card);
+
+    card.appendChild(nome);
+    card.appendChild(local);
+    card.appendChild(data);
+    card.appendChild(tamanho);
+    card.appendChild(img);
+
+    if (albumDiv) albumDiv.appendChild(card);
+    else container.appendChild(card);
   });
 }
 
-function getAno(str) { return parseInt(str.split(",")[0]); }
+mostrarTemplos(templos);
 
-function filtrar(tipo) {
-  let lista = templos;
-  if (tipo === "antigos") lista = templos.filter(t => getAno(t.consagracao) < 1900);
-  if (tipo === "novos") lista = templos.filter(t => getAno(t.consagracao) > 2000);
-  if (tipo === "grandes") lista = templos.filter(t => t.area > 90000);
-  if (tipo === "pequenos") lista = templos.filter(t => t.area < 10000);
-  if (titulo) {
-    if (tipo === "inicio") titulo.textContent = "Página Inicial";
-    if (tipo === "antigos") titulo.textContent = "Antigo";
-    if (tipo === "novos") titulo.textContent = "Novo";
-    if (tipo === "grandes") titulo.textContent = "Grande";
-    if (tipo === "pequenos") titulo.textContent = "Pequeno";
-  }
-  exibir(lista);
-  nav.classList.remove("open");
-  btn.classList.remove("open");
-}
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const filtro = e.target.textContent.trim();
+    document.querySelector("h2").textContent = filtro;
 
-document.getElementById("inicio").addEventListener("click", (e) => { e.preventDefault(); filtrar("inicio"); });
-document.getElementById("antigos").addEventListener("click", (e) => { e.preventDefault(); filtrar("antigos"); });
-document.getElementById("novos").addEventListener("click", (e) => { e.preventDefault(); filtrar("novos"); });
-document.getElementById("grandes").addEventListener("click", (e) => { e.preventDefault(); filtrar("grandes"); });
-document.getElementById("pequenos").addEventListener("click", (e) => { e.preventDefault(); filtrar("pequenos"); });
-
-exibir(templos);
+    if (filtro === "Página Inicial") mostrarTemplos(templos);
+    else if (filtro === "Antigo") mostrarTemplos(templos.filter(t => parseInt(t.consagracao.split(",")[0]) < 1900));
+    else if (filtro === "Novo") mostrarTemplos(templos.filter(t => parseInt(t.consagracao.split(",")[0]) > 2000));
+    else if (filtro === "Grande") mostrarTemplos(templos.filter(t => t.area > 90000));
+    else if (filtro === "Pequeno") mostrarTemplos(templos.filter(t => t.area < 10000));
+  });
+});
