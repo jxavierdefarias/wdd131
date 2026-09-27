@@ -1,0 +1,6 @@
+@media screen and (min-width: 740px) {
+  #menu { display: none; }
+  .navigation { display: flex; flex-direction: row; justify-content: flex-end; }
+  .album { grid-template-columns: 1fr 1fr 1fr; }
+  h1 { font-size: 2rem; }
+}
