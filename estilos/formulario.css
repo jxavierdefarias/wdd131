@@ -15,4 +15,5 @@ input[type="submit"], .btn{background:var(--secundaria); color:white; border:non
 input[type="submit"]:hover, .btn:hover{background:#B45309}
 .confirmacao{text-align:center}
 #contador{font-size:4rem; font-weight:700; color:var(--secundaria)}
+.rating, fieldset { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: .5rem 1rem; }
 @media(max-width:600px){ .card{padding:1.2rem} }
