@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação - MODELIT</title>
+    <link rel="stylesheet" href="styles/formulario.css">
+</head>
+<body>
+    <header>
+        <h1>MODELIT®</h1>
+    </header>
+    <main>
+        <div class="card confirmacao">
+            <h2>✅ Avaliação Enviada com Sucesso!</h2>
+            <p>Obrigado por avaliar nossos cabides.</p>
+            <p>Seus dados foram recebidos via método GET.</p>
+            <hr>
+            <h3>Total de avaliações enviadas por você:</h3>
+            <span id="contador">0</span>
+            <br><br>
+            <a href="formulario.html" class="btn">Voltar ao Formulário</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | MODELIT</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        let total = parseInt(localStorage.getItem('reviewCount') || '0');
+        total++;
+        localStorage.setItem('reviewCount', total);
+        document.getElementById('contador').textContent = total;
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+</html>
