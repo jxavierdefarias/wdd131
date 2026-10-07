@@ -12,4 +12,13 @@ header{background:var(--pri);color:#fff;display:flex;justify-content:space-betwe
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;padding:1rem 0}
 .card{background:#fff;padding:1.5rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.06);display:flex;flex-direction:column;gap:.8rem}
 footer{background:var(--pri);color:#fff;text-align:center;padding:1.5rem;margin-top:2rem}
-@media(max-width:700px){#menu{display:block}.navegacao{display:none;flex-direction:column;position:absolute;top:100%;left:0;width:100%;background:var(--pri);padding:1rem}.navegacao.open{display:flex}}
+@media(max-width:700px){#menu{display:block}.navegacao{display:none;flex-direction:column;position:absolute;top:100%;left:0;width:100%;background:var(--pri);padding:1rem}.navegacao.open{display:flex}}/* FORMULÁRIO - exigido no projeto */
+form.card{max-width:600px;margin:2rem auto}
+input,select,textarea{padding:.75rem;border:1px solid var(--bd);border-radius:8px;width:100%;font-size:1rem;font-family:inherit}
+fieldset{border:1px solid var(--bd);border-radius:8px;padding:1rem;display:grid;grid-template-columns:auto 1fr;gap:.5rem 1rem;align-items:center}
+input[type="checkbox"]{width:auto}
+input[type="submit"]{background:var(--sec);color:#fff;border:none;font-weight:700;cursor:pointer;margin-top:1rem}
+input[type="submit"]:hover{background:#B45309}
+.filtros{display:flex;gap:.8rem;margin:1rem 0}
+.filtros button{padding:.5rem 1rem;border:1px solid var(--bd);border-radius:20px;background:#fff;cursor:pointer}
+.filtros button.ativo{background:var(--pri);color:#fff}

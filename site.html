@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MODELIT - Fábrica de Cabides Premium</title>
     <meta name="description" content="Fábrica MODELIT - Cabides de acrílico, veludo e madeira para lojas.">
+    <meta name="author" content="Jorge Farias">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/modelit.css">
+    <script src="scripts/modelit.js" defer></script>
 </head>
 <body>
     <header>
         <h1>MODELIT</h1>
-        <button id="menuBtn">☰</button>
-        <nav id="mainNav">
+        <button id="menu"> e <nav class="navegacao" id="mainNav"></nav>
             <a href="site.html">Home</a>
             <a href="produtos.html">Produtos</a>
             <a href="contato.html">Contato</a>
@@ -58,9 +60,10 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> MODELIT Fábrica de Cabides</p>
+        <p>&copy; <span id="currentyear"></span> MODELIT Fábrica de Cabides</p>
         <p id="lastModified"></p>
+        <a href="referencias.html">Referências</a>
     </footer>
-    <script src="scripts/modelit.js"></script>
+
 </body>
 </html>

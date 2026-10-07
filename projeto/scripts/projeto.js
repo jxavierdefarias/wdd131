@@ -28,26 +28,23 @@ function renderizarProdutos(lista = produtos){
     document.getElementById("total-favoritos").textContent = favoritos.length;
 }
 
+
+
+function filtrar(tipo){
+    let filtrados = tipo === "todos" ? produtos : produtos.filter(p => p.tipo === tipo);
+    renderizarProdutos(filtrados);
+}
 function toggleFavorito(e){
     const id = parseInt(e.target.dataset.id);
-    
     if(favoritos.includes(id)){
         favoritos = favoritos.filter(f => f !== id);
     } else {
         favoritos.push(id);
     }
     localStorage.setItem("favoritosModelit", JSON.stringify(favoritos));
-    renderizarProdutos(document.querySelectorAll("[data-filtro].ativo") ? produtos : produtos);
-    
     const filtroAtivo = document.querySelector(".filtros button.ativo")?.dataset.filtro || "todos";
     filtrar(filtroAtivo);
 }
-
-function filtrar(tipo){
-    let filtrados = tipo === "todos" ? produtos : produtos.filter(p => p.tipo === tipo);
-    renderizarProdutos(filtrados);
-}
-
 
 document.addEventListener("DOMContentLoaded", ()=>{
     renderizarProdutos();
