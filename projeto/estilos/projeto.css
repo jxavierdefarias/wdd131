@@ -4,11 +4,7 @@
   --bg:#F9FAFB;
   --bd:#E5E7EB;
 }
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0;}
 html{height:100%;}
 body{
   font-family:'Inter',sans-serif;
@@ -37,7 +33,6 @@ header{
 .navegacao a.ativo{color:var(--sec);border-bottom:2px solid var(--sec);}
 #menu{display:none;background:none;color:#fff;border:none;font-size:1.8rem;cursor:pointer;}
 
-/* CONTEÚDO GERAL */
 main{
   flex:1;
   width:100%;
@@ -46,15 +41,13 @@ main{
   padding:2rem 1rem 4rem 1rem;
 }
 
-
+/* Só quando é contato.html - centraliza */
 body:has(form.card) main{
   display:flex;
   justify-content:center;
   align-items:center;
   min-height:calc(100vh - 130px);
 }
-
-/* HERO */
 
 .hero{
   display:grid;
@@ -66,35 +59,31 @@ body:has(form.card) main{
   max-width:1200px;
   margin:0 auto;
 }
-.hero h1{
-  font-size:clamp(1.5rem, 3vw, 2.2rem);
-  line-height:1.2;
-  margin-bottom:.8rem;
-}
-.hero p{
-  margin-bottom:1.5rem;
-  color:#6B7280;
-}
+.hero h1{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.2;margin-bottom:.8rem;}
+.hero p{margin-bottom:1.5rem;color:#6B7280;}
 .hero img{
-  width:100%;
-  max-width:520px;
-  height:auto;
-  max-height:55vh;
-  object-fit:contain;
-  border-radius:16px;
-  background:#fff;
-  padding:1rem;
-  box-shadow:0 8px 24px rgba(0,0,0,.06);
-  justify-self:center;
+  width:100%;max-width:520px;height:auto;max-height:55vh;
+  object-fit:contain;border-radius:16px;background:#fff;
+  padding:1rem;box-shadow:0 8px 24px rgba(0,0,0,.06);justify-self:center;
 }
 .info{
-  max-width:1200px;
-  margin:2rem auto 0 auto;
-  padding:1rem;
-  font-size:.85rem;
-  color:#6B7280;
-  border-top:1px solid var(--bd);
+  max-width:1200px;margin:2rem auto 0 auto;padding:1rem;
+  font-size:.85rem;color:#6B7280;border-top:1px solid var(--bd);
 }
+
+/* BOTÃO LARANJA - CORRIGIDO */
+.btn{
+  background:var(--sec);
+  color:#fff;
+  padding:.9rem 1.8rem;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:800;
+  display:inline-block;
+  box-shadow:0 4px 12px rgba(217,119,6,.3);
+  transition:.2s;
+}
+.btn:hover{background:#B45309;transform:translateY(-2px);}
 
 .filtros{display:flex;gap:.8rem;margin:1rem 0;flex-wrap:wrap;}
 .filtros button{padding:.5rem 1rem;border:1px solid var(--bd);border-radius:20px;background:#fff;cursor:pointer;}
@@ -105,7 +94,6 @@ body:has(form.card) main{
 .card h3{flex-grow:1;}
 .btn-fav{margin-top:auto;width:100%;padding:.5rem;cursor:pointer;border:1px solid var(--bd);border-radius:8px;background:#fff;}
 
-
 form.card{
   width:100%;
   max-width:580px;
@@ -114,7 +102,7 @@ form.card{
   padding:2rem;
   border-radius:16px;
   box-shadow:0 8px 24px rgba(0,0,0,.08);
-  min-height:calc(100vh - 130px);
+  min-height:auto;
   display:flex;
   flex-direction:column;
   gap:1rem;
@@ -125,7 +113,6 @@ input[type="checkbox"]{width:auto;}
 input[type="submit"]{background:var(--sec);color:#fff;border:none;font-weight:700;cursor:pointer;margin-top:1rem;padding:1rem;font-size:1.1rem;border-radius:10px;}
 input[type="submit"]:hover{background:#B45309;}
 
-/* RODAPÉ */
 footer{background:var(--pri);color:#fff;text-align:center;padding:1.5rem;margin-top:auto;width:100%;}
 
 @media(max-width:768px){
