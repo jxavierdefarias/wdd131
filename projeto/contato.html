@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contato MODELIT">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solicite orçamento de cabides premium MODELIT para sua loja">
+    <meta name="author" content="Jorge Farias">
     <title>Contato | MODELIT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,17 +13,59 @@
     <script src="scripts/projeto.js" defer></script>
 </head>
 <body>
-<header><h1>MODELIT®</h1><button id="menu">☰</button><nav class="navegacao"><a href="index.html">Home</a><a href="catalogo.html">Catálogo</a><a href="contato.html" class="ativo">Contato</a></nav></header>
+<header>
+    <h1>MODELIT®</h1>
+    <button id="menu" aria-label="Abrir menu">☰</button>
+    <nav class="navegacao">
+        <a href="index.html">Home</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="contato.html" class="ativo">Contato</a>
+    </nav>
+</header>
 <main>
-    <form method="get" action="catalogo.html" class="card">
-        <label for="nome">Nome Completo *</label><input type="text" id="nome" name="nome" required>
-        <label for="email">Email *</label><input type="email" id="email" name="email" required>
-        <label for="tipo">Tipo de Negócio *</label><select id="tipo" name="tipo" required><option value="" disabled selected>Selecione...</option><option value="loja">Loja de Roupas</option><option value="fabrica">Fábrica</option><option value="atacado">Atacado</option></select>
-        <fieldset><legend>Interesse</legend><input type="checkbox" id="veludo" name="interesse" value="veludo"><label for="veludo">Cabides Veludo</label><input type="checkbox" id="madeira" name="interesse" value="madeira"><label for="madeira">Cabides Madeira</label></fieldset>
-        <label for="msg">Mensagem</label><textarea id="msg" name="msg" rows="4"></textarea>
-        <input type="submit" value="Solicitar Orçamento">
+    <h2>Solicite seu Orçamento</h2>
+    <form method="get" action="agradecimento.html" class="card">
+        <label for="nome">Nome Completo *</label>
+        <input type="text" id="nome" name="nome" required autocomplete="name">
+        
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+        
+        <label for="tipo">Tipo de Negócio *</label>
+        <select id="tipo" name="tipo" required>
+            <option value="" disabled selected>Selecione...</option>
+            <option value="loja">Loja de Roupas</option>
+            <option value="fabrica">Fábrica</option>
+            <option value="atacado">Atacado</option>
+            <option value="hotel">Hotel</option>
+        </select>
+
+        <fieldset>
+            <legend>Interesse (pode marcar mais de um)</legend>
+            <div class="check-group">
+                <input type="checkbox" id="acrilico" name="interesse" value="acrilico">
+                <label for="acrilico">Cabides Acrílico</label>
+            </div>
+            <div class="check-group">
+                <input type="checkbox" id="veludo" name="interesse" value="veludo">
+                <label for="veludo">Cabides Veludo</label>
+            </div>
+            <div class="check-group">
+                <input type="checkbox" id="madeira" name="interesse" value="madeira">
+                <label for="madeira">Cabides Madeira</label>
+            </div>
+        </fieldset>
+
+        <label for="msg">Mensagem</label>
+        <textarea id="msg" name="msg" rows="4" placeholder="Quantidade, modelo, prazo..."></textarea>
+        
+        <input type="submit" value="Solicitar Orçamento" class="btn">
     </form>
 </main>
-<footer><p>&copy; <span id="currentyear"></span> MODELIT</p><p id="lastModified"></p><a href="referencias.html">Referências</a></footer>
+<footer>
+    <p>&copy; <span id="currentyear"></span> MODELIT | WDD131 - Jorge Farias</p>
+    <p id="lastModified"></p>
+    <a href="referencias.html">Referências</a>
+</footer>
 </body>
 </html>
