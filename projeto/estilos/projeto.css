@@ -42,11 +42,42 @@ main{
 }
 
 
+/* CONTATO CORRIGIDO - SEM CORTE MOBILE */
 body:has(form.card) main{
+  display:block;
+  padding:2rem 1rem 4rem 1rem;
+}
+.pagina-contato{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:2rem;
+  align-items:start;
+  max-width:1100px;
+  margin:0 auto;
+}
+.pagina-contato .texto h1{
+  font-size:2rem;
+  line-height:1.1;
+  margin-bottom:.5rem;
+  color:var(--pri);
+}
+fieldset{
+  border:1px solid var(--bd);
+  border-radius:12px;
+  padding:1rem;
   display:flex;
-  justify-content:center;
+  flex-direction:column;
+  gap:.6rem;
+}
+fieldset label{
+  display:flex;
   align-items:center;
-  min-height:calc(100vh - 130px);
+  gap:.5rem;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+  .pagina-contato{grid-template-columns:1fr;}
 }
 
 .hero{
