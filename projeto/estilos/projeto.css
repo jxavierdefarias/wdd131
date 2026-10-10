@@ -41,7 +41,7 @@ main{
   padding:2rem 1rem 4rem 1rem;
 }
 
-/* HERO - INDEX APROVADO NO PRINT */
+
 .hero{
   display:grid;
   grid-template-columns:1.1fr 0.9fr;
@@ -76,7 +76,7 @@ main{
 }
 .btn:hover{background:#B45309;transform:translateY(-2px);}
 
-/* CATALOGO */
+
 .filtros{display:flex;gap:.8rem;margin:1rem 0;flex-wrap:wrap;}
 .filtros button{padding:.5rem 1rem;border:1px solid var(--bd);border-radius:20px;background:#fff;cursor:pointer;}
 .filtros button.ativo{background:var(--pri);color:#fff;}
@@ -86,7 +86,7 @@ main{
 .card h3{flex-grow:1;}
 .btn-fav{margin-top:auto;width:100%;padding:.5rem;cursor:pointer;border:1px solid var(--bd);border-radius:8px;background:#fff;}
 
-/* CONTATO - FIX DEFINITIVO SEM CORTE */
+
 .pagina-contato{
   display:grid;
   grid-template-columns:0.9fr 1.1fr;
