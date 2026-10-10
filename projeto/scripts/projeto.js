@@ -1,9 +1,13 @@
 // projeto.js
 const produtos = [
-    {id:1, nome:"Cabide Veludo Preto", tipo:"veludo", preco:2.5, img:"images/cabide-veludo.webp"},
-    {id:2, nome:"Cabide Madeira Nobre", tipo:"madeira", preco:4.9, img:"images/cabide-madeira.webp"},
-    {id:3, nome:"Cabide Veludo Rosa", tipo:"veludo", preco:2.7, img:"images/cabide-veludo.webp"}
+    {id:1, nome:"Cabide Terno Luxo", tipo:"Terno", preco:3.5, img:"imagens/hero-modelit.webp"},
+    {id:2, nome:"Cabide Botton Saia", tipo:"Botton", preco:4.9, img:"imagens/botonpresilhas.webp"},
+    {id:3, nome:"Cabide Boutique Giratório", tipo:"Boutique", preco:2.80, img:"imagens/boutiquegiratorio.webp"},
+    {id:4, nome:"Cabide      Hotel ", tipo:"Hotel", preco:5.60, img:"imagens/cabidehotel.webp"},
+    {id:5, nome:"Cabide  magazine preto", tipo:"Magazine", preco:1.85, img:"imagens/magazinepr.webp"},
+    {id:6, nome:"Cabide  magazine Transparente", tipo:"Magazine", preco:2.10, img:"imagens/magazinetr.webp"}
 ];
+
 
 let favoritos = JSON.parse(localStorage.getItem("favoritosModelit")) || [];
 
