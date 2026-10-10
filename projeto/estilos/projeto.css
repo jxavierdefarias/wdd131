@@ -146,6 +146,30 @@ input[type="submit"]:hover{background:#B45309;}
 
 footer{background:var(--pri);color:#fff;text-align:center;padding:1.5rem;margin-top:auto;width:100%;}
 
+
+.pagina-contato{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:2.5rem;
+  max-width:1100px;
+  margin:0 auto;
+  align-items:start;
+  padding:1rem;
+}
+.texto-contato h2{
+  font-size:clamp(1.8rem, 4vw, 2.4rem);
+  line-height:1.1;
+  color:var(--pri);
+  margin-bottom:.6rem;
+}
+.form-contato{max-width:100%;margin:0;}
+.check-group{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  padding:.3rem 0;
+}
+.check-group input[type="checkbox"]{width:18px;height:18px;}
 @media(max-width:768px){
   #menu{display:block;}
   .navegacao{display:none;flex-direction:column;position:absolute;top:100%;left:0;width:100%;background:var(--pri);padding:1rem;}

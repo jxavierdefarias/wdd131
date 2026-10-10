@@ -23,8 +23,14 @@
     </nav>
 </header>
 <main>
-    <h2>Solicite seu Orçamento</h2>
-    <form method="get" action="agradecimento.html" class="card">
+  <div class="pagina-contato">
+    <div class="texto-contato">
+      <h2>Solicite seu Orçamento</h2>
+      <p>Resposta em até 24h úteis. Informe quantidade e modelo.</p>
+      <div class="info">Atendemos todo Brasil • Frete sob consulta</div>
+    </div>
+
+    <form method="get" action="agradecimento.html" class="card form-contato">
         <label for="nome">Nome Completo *</label>
         <input type="text" id="nome" name="nome" required autocomplete="name">
         
@@ -59,8 +65,9 @@
         <label for="msg">Mensagem</label>
         <textarea id="msg" name="msg" rows="4" placeholder="Quantidade, modelo, prazo..."></textarea>
         
-        <input type="submit" value="Solicitar Orçamento" class="btn">
+        <input type="submit" value="Solicitar Orçamento">
     </form>
+  </div>
 </main>
 <footer>
     <p>&copy; <span id="currentyear"></span> MODELIT | WDD131 - Jorge Farias</p>
