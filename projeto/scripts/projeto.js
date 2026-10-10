@@ -1,6 +1,6 @@
 // projeto.js - MODELIT WDD131
 const produtos = [
-    {id:1, nome:"Cabide Terno Luxo", tipo:"terno", preco:3.5, img:"imagens/hero-modelit.webp"},
+    {id:1, nome:"Cabide Terno Luxo", tipo:"terno", preco:4.2, img:"imagens/hero-modelit.webp"},
     {id:2, nome:"Cabide Botton Saia", tipo:"acrilico", preco:4.9, img:"imagens/botonpresilhas.webp"},
     {id:3, nome:"Cabide Boutique Giratório", tipo:"acrilico", preco:2.80, img:"imagens/boutiquegiratorio.webp"},
     {id:4, nome:"Cabide Hotel", tipo:"hotel", preco:5.60, img:"imagens/cabidehotel.webp"},
@@ -8,6 +8,7 @@ const produtos = [
     {id:6, nome:"Cabide Magazine Transparente", tipo:"acrilico", preco:2.10, img:"imagens/magazinetr.webp"},
     {id:7, nome:"Cabide Hotel com presilhas", tipo:"hotel", preco:6.10, img:"imagens/hotelpresilhas.webp"},
     {id:8, nome:"Cabide Lingerie", tipo:"acrilico", preco:3.90, img:"imagens/lingerie.webp"},
+    {id:9, nome:"Cabide Terno Standard", tipo:"terno", preco:3.5, img:"imagens/cabdeternostandard.webp"}
 ];
 
 let favoritos = JSON.parse(localStorage.getItem("favoritosModelit")) || [];
@@ -33,7 +34,7 @@ function renderizarProdutos(lista = produtos){
 }
 
 function filtrar(tipo){
-    // correção: minúsculo + trim para não quebrar
+    
     const filtrados = tipo === "todos" ? produtos : produtos.filter(p => p.tipo.trim().toLowerCase() === tipo.toLowerCase());
     renderizarProdutos(filtrados);
 }

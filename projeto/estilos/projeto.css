@@ -41,7 +41,7 @@ main{
   padding:2rem 1rem 4rem 1rem;
 }
 
-/* Só quando é contato.html - centraliza */
+
 body:has(form.card) main{
   display:flex;
   justify-content:center;
@@ -71,7 +71,7 @@ body:has(form.card) main{
   font-size:.85rem;color:#6B7280;border-top:1px solid var(--bd);
 }
 
-/* BOTÃO LARANJA - CORRIGIDO */
+
 .btn{
   background:var(--sec);
   color:#fff;
