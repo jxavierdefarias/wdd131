@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>Obrigado | MODELIT</title>
+<link rel="stylesheet" href="estilos/projeto.css">
+<script>
+let total = parseInt(localStorage.getItem("orcamentosModelit")||"0")+1;
+localStorage.setItem("orcamentosModelit", total);
+document.addEventListener("DOMContentLoaded", ()=>{
+  document.getElementById("total").textContent = total;
+  document.getElementById("currentyear").textContent = new Date().getFullYear();
+});
+</script></head>
+<body>
+<main class="card" style="text-align:center; margin:2rem auto; max-width:500px">
+<h1>✅ Orçamento Enviado!</h1>
+<p>Obrigado! Já recebemos seu pedido.</p>
+<p>Total de orçamentos enviados: <strong id="total">0</strong></p>
+<a href="catalogo.html" class="btn">Voltar ao Catálogo</a>
+</main>
+<footer><p>&copy; <span id="currentyear"></span> MODELIT</p></footer>
+</body>
+</html>
