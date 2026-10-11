@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><meta charset="UTF-8"><title>Obrigado | MODELIT</title>
-<link rel="stylesheet" href="estilos/projeto.css">
-<script>
-let total = parseInt(localStorage.getItem("orcamentosModelit")||"0")+1;
-localStorage.setItem("orcamentosModelit", total);
-document.addEventListener("DOMContentLoaded", ()=>{
-  document.getElementById("total").textContent = total;
-  document.getElementById("currentyear").textContent = new Date().getFullYear();
-});
-</script></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Obrigado por solicitar orçamento MODELIT">
+    <meta name="author" content="Jorge Farias">
+    <title>Obrigado | MODELIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/projeto.css">
+    <script src="scripts/projeto.js" defer></script>
+</head>
 <body>
-<main class="card" style="text-align:center; margin:2rem auto; max-width:500px">
-<h1>✅ Orçamento Enviado!</h1>
-<p>Obrigado! Já recebemos seu pedido.</p>
-<p>Total de orçamentos enviados: <strong id="total">0</strong></p>
-<a href="catalogo.html" class="btn">Voltar ao Catálogo</a>
+<header>
+    <h1>MODELIT®</h1>
+    <button id="menu" aria-label="Abrir menu">☰</button>
+    <nav class="navegacao">
+        <a href="index.html">Home</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<main>
+  <div class="card" style="text-align:center; max-width:600px; margin:3rem auto; padding:3rem 2rem;">
+    <h1 style="color:var(--pri);">✅ Orçamento Enviado!</h1>
+    <p style="margin:1rem 0;">Obrigado! Já recebemos seu pedido. Responderemos em até 24h úteis.</p>
+    <p>Total de orçamentos enviados neste navegador: <strong id="totalOrc">0</strong></p>
+    <div style="margin-top:2rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="catalogo.html" class="btn">Voltar ao Catálogo</a>
+      <a href="index.html" style="padding:.9rem 1.8rem; border:1px solid var(--bd); border-radius:10px; text-decoration:none; color:var(--pri); font-weight:600;">Home</a>
+    </div>
+  </div>
 </main>
-<footer><p>&copy; <span id="currentyear"></span> MODELIT</p></footer>
+
+<footer>
+    <p>&copy; <span id="currentyear"></span> MODELIT | WDD131 - Jorge Farias</p>
+    <p id="lastModified"></p>
+    <a href="referencias.html">Referências</a>
+</footer>
+
+<script>
+  // localStorage exigido pelo WDD131
+  let total = parseInt(localStorage.getItem("orcamentosModelit")||"0")+1;
+  localStorage.setItem("orcamentosModelit", total);
+  document.addEventListener("DOMContentLoaded", ()=>{
+    const el = document.getElementById("totalOrc");
+    if(el) el.textContent = total;
+  });
+</script>
 </body>
 </html>
