@@ -7,7 +7,7 @@ const produtos = [
     {id:5, nome:"Cabide Magazine Preto", tipo:"acrilico", preco:1.85, img:"imagens/magazinepr.webp"},
     {id:6, nome:"Cabide Magazine Transparente", tipo:"acrilico", preco:2.10, img:"imagens/magazinetr.webp"},
     {id:7, nome:"Cabide Hotel com presilhas", tipo:"hotel", preco:6.10, img:"imagens/hotelpresilhas.webp"},
-    {id:8, nome:"Cabide Lingerie", tipo:"acrilico", preco:3.90, img:"imagens/lingerie.webp"},
+    {id:8, nome:"Cabide Infantil Preto", tipo:"acrilico", preco:0.50, img:"imagens/infantilpreto.webp"},
     {id:9, nome:"Cabide Terno Standard", tipo:"terno", preco:3.5, img:"imagens/cabideternostandard.webp"}
 ];
 
