@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasil</title>
+    <meta name="author" content="Jorge Farias">
+    <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica, Jorge Farias, Sobre Mim, recursos web dev">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/brasil.css">
+    <script src="scripts/brasil.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Brasil</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                 <img src="imagens/onca-pintada.webp"  alt="onça-pintada">
+             </picture>
+            <section class="card data-card">
+                <div class="card-header">
+                    <h2>Dados</h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Área:</strong> 8.515.767,049  km²</p>
+                    <p><strong>População:</strong> 214.289.325</p>
+                    <p><strong>Capital:</strong> Brasília</p>
+                    <p><strong>Idiomas:</strong> Português</p>
+                    <p><strong>Moeda:</strong> Real Brasileiro (BRL)</p>
+                    <p><strong>Fuso Horário:</strong> UTC-3</p>
+                    <p><strong>DDI:</strong> +55</p>
+                    <p><strong>Domínio:</strong> .br</p>
+                </div>
+            </section>
+
+            <section class="card weather-card">
+                <div class="card-header">
+                    
+                    <h2>Clima 
+                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="white">
+                         <path d="M6.5 20q-1.25 0-2.125-.875T3.5 17q0-1.25.875-2.125T6.5 13q.25 0 .5.031T7.5 13q.5-1.75 1.75-2.875T12.5 9q2.5 0 4.25 1.75T18.5 15q1.05 0 1.775.725T21 17.5q0 1.05-.725 1.775T18.5 20h-12Zm0-2h12q.425 0 .713-.288T19.5 17q0-.425-.288-.713T18.5 16q-.65 0-1.025-.438T17.1 14.5q0-.225.025-.463T17.2 13.7q-.525-1.2-1.638-1.95T12.5 11q-1.875 0-3.188 1.188T7.9 15.1q-.225-.1-.5-.15T6.5 15q-.425 0-.713.288T5.5 16q0 .425.288.713T6.5 18Zm0 0H18.5 6.5ZM12 8q0-1.25.875-2.125T15 5q.425 0 .8.1t.7.3l-1.4 1.4q-.1-.05-.225-.063T15 6.8q-.425 0-.713.288T14 7.8q0 .425.288.713T15 8.8q.425 0 .713-.288T16 7.8q0-.075-.013-.138T15.9 7.5l1.4-1.4q.2.325.3.7t.1.8q0 1.25-.875 2.125T15 11q-1.25 0-2.125-.875T12 8Z"/>
+                         </svg>
+                   </h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Temperatura:</strong> <span id="temp">--</span>°C</p>
+                    <p><strong>Condições:</strong> <span id="condicoes">--</span></p>
+                    <p><strong>vento:</strong> <span id="wind">--</span> km/h</p>
+                    <p><strong>Sensação Térmica:</strong> <span id="windchill">N/A</span></p>
+                </div>
+               
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>©<span id="year"></span> | Jorge Farias | Brasil</p>
+        <p>Última Modificação: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
+

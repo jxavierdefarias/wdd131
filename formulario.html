@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODELIT - Avaliação de Produto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/formulario.css">
+    <script src="scripts/formulario.js" defer></script>
+    <meta name="description" content="Formulário de avaliação MODELIT- wdd 131-fundamentos de desenvolvimento web">
+    <meta name="author" content="Jorge Farias">
+</head>
+<body>
+    <header>
+        <h1>MODELIT® - Fábrica de Cabides</h1>
+    </header>
+    <main>
+        <form method="get" action="avaliacao.html" class="card">
+            <label for="produto">Nome do Produto *</label>
+            <select id="produto" name="produto" required>
+                <option value="" disabled selected>Selecione um Produto...</option>
+            </select>
+
+            <fieldset>
+                <legend>Classificação Geral *</legend>
+                <div class="rating">
+                    <input type="radio" id="star5" name="avaliacao" value="5" required>
+                    <label for="star5">5 Estrelas - &starf;&starf;&starf;&starf;&starf;</label>
+
+                    <input type="radio" id="star4" name="avaliacao" value="4" required>
+                    <label for="star4">4 Estrelas - &starf;&starf;&starf;&starf;</label>
+
+                    <input type="radio" id="star3" name="avaliacao" value="3" required>
+                    <label for="star3">3 Estrelas - &starf;&starf;&starf;</label>
+
+                    <input type="radio" id="star2" name="avaliacao" value="2" required>
+                    <label for="star2">2 Estrelas - &starf;&starf;</label>
+
+                    <input type="radio" id="star1" name="avaliacao" value="1" required>
+                    <label for="star1">1 Estrela - &starf;</label>
+                </div>
+            </fieldset>
+
+            <label for="dataInstalacao">Data de Instalação *</label>
+            <input type="date" id="dataInstalacao" name="dataInstalacao" required>
+
+            <fieldset>
+                <legend>Recursos Úteis</legend>
+                <input type="checkbox" id="durabilidade" name="recursos" value="durabilidade">
+                <label for="durabilidade">Durabilidade</label>
+
+                <input type="checkbox" id="design" name="recursos" value="design">
+                <label for="design">Design Elegante</label>
+
+                <input type="checkbox" id="acabamento" name="recursos" value="acabamento">
+                <label for="acabamento">Acabamento Premium</label>
+
+                <input type="checkbox" id="personalizacao" name="recursos" value="personalizacao">
+                <label for="personalizacao">Personalização com Logo</label>
+            </fieldset>
+
+            <label for="avaliacaoTexto">Avaliação Escrita</label>
+            <textarea id="avaliacaoTexto" name="avaliacaoTexto" rows="6"></textarea>
+
+            <label for="nomeUsuario">Seu Nome</label>
+            <input type="text" id="nomeUsuario" name="nomeUsuario">
+
+            <input type="submit" value="Enviar Avaliação">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | MODELIT | WDD 131</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

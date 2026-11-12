@@ -1,0 +1,8 @@
+
+@media screen and (min-width: 740px){
+  #menu{display:none}
+  header{flex-direction:row}
+  .navigation{display:flex!important;flex-direction:row;justify-content:flex-end;gap:1rem}
+  nav ul{flex-direction:row}
+  .album{grid-template-columns:1fr 1fr 1fr}
+}
