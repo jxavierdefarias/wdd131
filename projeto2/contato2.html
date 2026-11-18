@@ -29,44 +29,50 @@
       <p>Resposta em até 24h úteis. Informe quantidade e modelo.</p>
       <div class="info">Atendemos todo Brasil • Frete sob consulta</div>
     </div>
+<form id="form-contato" class="card form-contato">
+  <fieldset>
+    <legend>Interesse (pode marcar mais de um)</legend>
+    <div class="check-group">
+      <input type="checkbox" id="veludo" name="interesse" value="Cabides Veludo">
+      <label for="veludo">Cabides Veludo</label>
+    </div>
+    <div class="check-group">
+      <input type="checkbox" id="acrilico" name="interesse" value="Cabides Acrílico">
+      <label for="acrilico">Cabides Acrílico</label>
+    </div>
+    <div class="check-group">
+      <input type="checkbox" id="hotel" name="interesse" value="Cabides Hotel">
+      <label for="hotel">Cabides Hotel</label>
+    </div>
+    <div class="check-group">
+      <input type="checkbox" id="madeira" name="interesse" value="Cabides Madeira">
+      <label for="madeira">Cabides Madeira</label>
+    </div>
+  </fieldset>
 
-    <form method="get" action="agradecimento2.html" class="card form-contato">
-        <label for="nome">Nome Completo *</label>
-        <input type="text" id="nome" name="nome" required autocomplete="name">
-        
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required autocomplete="email">
-        
-        <label for="tipo">Tipo de Negócio *</label>
-        <select id="tipo" name="tipo" required>
-            <option value="" disabled selected>Selecione...</option>
-            <option value="loja">Loja de Roupas</option>
-            <option value="fabrica">Fábrica</option>
-            <option value="atacado">Atacado</option>
-            <option value="hotel">Hotel</option>
-        </select>
+  <label for="msg">Mensagem</label>
+  <textarea id="msg" name="msg" rows="4" placeholder="Quantidade, modelo, prazo..."></textarea>
 
-        <fieldset>
-            <legend>Interesse (pode marcar mais de um)</legend>
-            <div class="check-group">
-                <input type="checkbox" id="acrilico" name="interesse" value="acrilico">
-                <label for="acrilico">Cabides Acrílico</label>
-            </div>
-            <div class="check-group">
-                <input type="checkbox" id="veludo" name="interesse" value="veludo">
-                <label for="veludo">Cabides Hotel</label>
-            </div>
-            <div class="check-group">
-                <input type="checkbox" id="madeira" name="interesse" value="madeira">
-                <label for="madeira">Cabides Madeira</label>
-            </div>
-        </fieldset>
+  <input type="submit" value="Solicitar Orçamento">
+</form>
 
-        <label for="msg">Mensagem</label>
-        <textarea id="msg" name="msg" rows="4" placeholder="Quantidade, modelo, prazo..."></textarea>
-        
-        <input type="submit" value="Solicitar Orçamento">
-    </form>
+<script>
+document.getElementById('form-contato').addEventListener('submit', function(e){
+  e.preventDefault();
+  
+  const marcados = [...document.querySelectorAll('input[name="interesse"]:checked')].map(c => c.value).join(', ');
+  const msg = document.getElementById('msg').value;
+  
+  const texto = `Olá! Vim pelo site AXFSTORE.%0AQuero orçamento de: ${marcados || 'Não informado'}%0AMensagem: ${msg}`;
+  
+  window.open(`https://wa.me/5511939453912?text=${encodeURIComponent(texto)}`, '_blank');
+  
+  // Depois manda pra página de agradecimento
+  window.location.href = 'agradecimento2.html';
+});
+</script>
+
+  
   </div>
 </main>
 <footer>
