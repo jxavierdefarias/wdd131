@@ -63,10 +63,12 @@ document.getElementById('form-contato').addEventListener('submit', function(e){
   const marcados = [...document.querySelectorAll('input[name="interesse"]:checked')].map(c => c.value).join(', ');
   const msg = document.getElementById('msg').value;
   
+  // AGORA CERTO: usa \n, não %0A
   const texto = `Olá! Vim pelo site AXFSTORE.\nQuero orçamento de: ${marcados || 'Não informado'}\nMensagem: ${msg}`;
   
   window.open(`https://wa.me/5511939453912?text=${encodeURIComponent(texto)}`, '_blank');
-   // MOSTRA OBRIGADO NA MESMA PÁGINA - SEM IR PRA 404
+  
+  // MOSTRA OBRIGADO NA MESMA PÁGINA - SEM IR PRA 404
   this.innerHTML = '<h3 style="text-align:center; color:green; padding:20px;">✅ Obrigado!<br>Seu pedido foi enviado para o WhatsApp.<br>Retornaremos em breve!</h3>';
 });
 </script>
